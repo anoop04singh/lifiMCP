@@ -1,4 +1,4 @@
-LI.FI MCP Server
+# NitroMCP
 
 <img width="1600" height="900" alt="Untitled design (11)" src="https://github.com/user-attachments/assets/fa037ab3-185a-4bfa-9d69-4f47c6faa783" />
 
@@ -107,21 +107,6 @@ JSON
 
 `   {    "mcpServers": {      "lifi": {        "command": "/usr/local/bin/node",        "args": ["/absolute/path/to/project/dist/index.js"]      }    }  }   `
 
-🧪 Testing
-----------
-
-### Verification Script
-
-A standalone test script is included to verify your wallet configuration and the LI.FI SDK connection without running the full server.
-
-1.  Edit test\_execute.ts to set your desired swap parameters (Chain ID, Token Addresses, Amount).
-    
-2.  Run the test:
-    
-
-Bash
-
-`   npx ts-node --esm test_execute.ts   `
 
 🔮 Future Implementations
 -------------------------
