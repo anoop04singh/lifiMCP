@@ -110,16 +110,10 @@ JSON
 Demo
 -------------------------
 <img width="934" height="591" alt="Screenshot 2026-02-09 114727" src="https://github.com/user-attachments/assets/b4e35ac7-3b84-48fa-8570-415099050695" />
-Fetching the best quote!
-
 
 <img width="886" height="679" alt="Screenshot 2026-02-09 114759" src="https://github.com/user-attachments/assets/b13916d4-c84d-4226-8507-da36803e671a" />
-Summary
 
 <img width="962" height="681" alt="Screenshot 2026-02-09 114812" src="https://github.com/user-attachments/assets/89ca7d97-0a95-49b4-a595-48e9af621be8" />
-Exectue Quote Function
-
-
 
 🔮 Future Implementations
 -------------------------
