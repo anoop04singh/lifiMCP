@@ -49,6 +49,15 @@ Executes a previously fetched quote on the blockchain.
 *   **Inputs:** quote (The full JSON string returned by get\_quote).
     
 *   **Process:** Converts the quote to a runnable "Route", handles approvals, and submits the transaction using the server's wallet.
+
+
+### 3. ENS Integration:
+
+Resolves from and to addresses for easier and quicker transfer.
+
+<img width="945" height="470" alt="Screenshot 2026-02-09 133241" src="https://github.com/user-attachments/assets/2d8354c9-2e2e-4561-89d0-4dccb1461374" />
+<img width="900" height="508" alt="Screenshot 2026-02-09 133258" src="https://github.com/user-attachments/assets/ebfc5770-3698-404b-b8df-90a749acb881" />
+
     
 
 📦 Installation & Setup
@@ -70,11 +79,7 @@ Bash
 
 ### 2\. Environment Configuration
 
-Create a .env file in the root directory:
-
-Code snippet
-
-`   # Your EVM Private Key (Must start with 0x...)  EVM_PRIVATE_KEY=0xYOUR_PRIVATE_KEY_HERE   `
+We will use Clade Config file for .env.
 
 _Note: Ensure the wallet associated with this key has native gas tokens (ETH, MATIC, etc.) on the source chain you intend to use._
 
@@ -99,13 +104,26 @@ Add the following entry (adjust paths to match your system):
 
 JSON
 
-`   {    "mcpServers": {      "lifi": {        "command": "node",        "args": ["C:\\Path\\To\\Your\\Project\\dist\\index.js"]      }    }  }   `
-
+`   { 
+  "mcpServers": {
+    "lifi": {
+      "command": "node",
+      "args": ["C:\\Path\\To\\Your\\Project\\dist\\index.js"],
+      "env": {
+        "EVM_PRIVATE_KEY": "0xYOUR_PRIVATE_KEY_HERE"
+      }
+    }
+  }
+}
+`
 **MacOS/Linux:**
 
 JSON
 
-`   {    "mcpServers": {      "lifi": {        "command": "/usr/local/bin/node",        "args": ["/absolute/path/to/project/dist/index.js"]      }    }  }   `
+
+`   {    "mcpServers": {      "lifi": {        "command": "/usr/local/bin/node",        "args": ["/absolute/path/to/project/dist/index.js"],   "env": {
+        "EVM_PRIVATE_KEY": "0xYOUR_PRIVATE_KEY_HERE"
+      }     }    }  }   `
 
 Demo
 -------------------------
